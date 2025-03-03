@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PostCard from '../components/PostCard.astro';
+
+const posts = [
+  { 
+    title: "The Art of Ramen: More Than Just a Bowl of Noodles", 
+    summary: "Ramen is more than just a quick meal—it's a cultural experience. From rich tonkotsu to delicate shoyu broth, discover the craftsmanship behind this beloved dish.", 
+    slug: "art-of-ramen" 
+  },
+  { 
+    title: "How to Stay Productive in College Without Burning Out", 
+    summary: "Balancing academics, social life, and self-care in college can feel overwhelming. Here are practical tips to stay on top of your work while maintaining your well-being.", 
+    slug: "college-productivity" 
+  },
+  { 
+    title: "Why Basketball Is More Than Just a Game", 
+    summary: "Basketball isn't just about scoring points—it's about teamwork, perseverance, and discipline. Learn how the game teaches valuable life lessons both on and off the court.", 
+    slug: "basketball-life-lessons" 
+  },
+  { 
+    title: "Hidden Gems: Underrated Travel Destinations You Need to Visit", 
+    summary: "Forget the tourist traps! Explore lesser-known but breathtaking destinations that offer unforgettable experiences without the crowds.", 
+    slug: "hidden-travel-gems" 
+  }
+];
+
+---
+
+<Layout title="Blog">
+  <h2>Blog Posts:</h2>
+  {posts.map(post => (
+    <PostCard {...post} />
+  ))}
+</Layout>
